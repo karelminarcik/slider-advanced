@@ -1,0 +1,54 @@
+.all-movies {
+    color: #e5e5e5;
+    text-align: center;
+    box-shadow: 0 0 15px red ;
+    padding: 20px;
+
+}
+
+.all-movies button {
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    color: red;
+    cursor: pointer;
+}
+
+.all-movies-content {
+    display: flex;
+    width: 500px;
+    overflow: hidden;
+    height: 400px;
+    text-align: center;
+    position: relative;
+
+}
+
+.all-movies-content article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.all-movies-content img {
+    width: 80%;
+    height: 225px;
+}
+
+article.active-slide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+article.last-slide {
+    transform: translateX(-100%);
+}
+
+article.next-slide{
+    transform: translateX(+100%);
+}
+
